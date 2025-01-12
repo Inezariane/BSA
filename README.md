@@ -1,7 +1,7 @@
 This is a simple PHP project that resets a registered user's password. 
 
 The database used is **Postgresql**, use the following query to create the database.
-
+```bash
 CREATE TABLE users (
     id SERIAL PRIMARY KEY, 
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -9,7 +9,7 @@ CREATE TABLE users (
     reset_token VARCHAR(255), 
     token_expiry TIMESTAMP 
 );
-
+```
 ---
 
 ## Getting Started 

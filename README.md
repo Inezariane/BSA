@@ -22,6 +22,7 @@ CREATE TABLE users (
 ```bash
    composer require phpmailer/phpmailer      in your working directory
 ```
+in your working directory
 **3. Activate the PHP server in your working directory by running**
 ```bash
    php -S localhost:8080

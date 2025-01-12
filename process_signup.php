@@ -1,15 +1,13 @@
 <?php
 require 'db_connect.php';
+// Start session
 session_start();
-
+// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
 
-    // Debugging
-    echo "Email: $email <br>";
-    echo "Password: $password <br>";
-
+    
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 

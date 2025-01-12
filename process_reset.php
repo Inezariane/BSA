@@ -35,18 +35,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP host (smtp.gmail.com is for Gmail)
                 $mail->SMTPAuth = true;
-                $mail->Username = 'lisearena0@gmail.com'; // Replace with your sender email
-                $mail->Password = 'chalilise13'; // Replace with your sender email password 
+                $mail->Username = 'sender0@gmail.com'; // Replace with your sender email
+                $mail->Password = 'password'; // Replace with your sender email password 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // (Recommended for Gmail, Outlook, etc.)
                 $mail->Port = 587;
 
                 // Email Settings
-                $mail->setFrom('lisearena0@gmail.com', 'BSA'); // Replace with your sender email and name
+                $mail->setFrom('sender@gmail.com', 'Site_name'); // Replace with your sender email and name
                 $mail->addAddress($email);
                 $mail->isHTML(true);
                 $mail->Subject = 'Password Reset Request';
                 $mail->Body = "Click the link below to reset your password:<br><br>
-                               <a href='http://yourdomain.com/reset_form.php?token=$resetToken'>Reset Password</a><br><br>
+                               <a href='http://localhost:8080/reset_form.php?token=$resetToken'>Reset Password</a><br><br>
                                This link will expire in 1 hour.";
 
                 // Send email

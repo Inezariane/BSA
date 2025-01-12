@@ -20,7 +20,7 @@ CREATE TABLE users (
 ```
 **2. Install PHPMailer to enable email sharing by running**
 ```bash
-   composer require phpmailer/phpmailer      in your working directory
+   composer require phpmailer/phpmailer      
 ```
 in your working directory
 **3. Activate the PHP server in your working directory by running**
